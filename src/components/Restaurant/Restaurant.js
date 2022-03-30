@@ -18,12 +18,12 @@ const Restaurant = () => {
 
     return (
         <section className='bg-gray-50 pt-16'>
-            <div className="mx-auto w-5/6">
-                <div className="search-section flex mx-auto w-2/6 py-5 px-3 mb-3">
+            <div className="mx-auto w-5/6 ">
+                <div className="search-section flex mx-auto w-full md:w-3/6 lg:w-2/6 py-5 md:px-3 mb-3">
                     <input onChange={searchMeal} placeholder='Search your meal' className='w-full outline-none rounded-sm px-2' type="text" />
                     <button className='bg-orange-400 text-white py-1 px-3 rounded-sm duration-300 hover:text-orange-400 hover:bg-transparent border border-orange-400'>Search</button>
                 </div>
-                <div className="grid grid-cols-4 gap-4">
+                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
                     {
                         meals?.map(meal => <Meal meal={meal} key={meal.idMeal} />)
                     }
